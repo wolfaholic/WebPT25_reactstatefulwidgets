@@ -65,8 +65,8 @@ export default function Counter() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: (count % 2 == 0) ? 'royalblue' : 'crimson'
-  
+    color: (count % 2 == 0) ? 'royalblue' : 'crimson',
+    borderColor: (count % 2 == 0) ? 'white' : 'black',
   }
 
   return (
