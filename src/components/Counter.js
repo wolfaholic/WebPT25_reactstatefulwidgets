@@ -51,15 +51,16 @@ import React, { useState } from 'react'; /* STEP 0 */
 export default function Counter() {
   const [count, setCount] = useState(0);
 
-  const increment = () => {
-    setCount(count + 1);
-  };
-  const decrement = () => {
-      setCount(count - 1);
-  };
-  const reset = () => {
-    setCount(0)
-  };
+  // const increment = () => {
+  //   setCount(count + 1);
+  // };
+
+  // const decrement = () => {
+  //     setCount(count - 1);
+  // };
+  // const reset = () => {
+  //   setCount(0)
+  // };
 
   const style = {
     fontSize: '1.5em',
@@ -75,9 +76,9 @@ export default function Counter() {
         Number 0 is {(count % 2 == 0) ? 'Even' : 'Odd'} {count}
       </div>
       <div>
-        <button id='increment' onClick={increment}>Increment</button>
-        <button id='decrement' onClick={decrement}>Decrement</button>
-        <button id='resetCount' onClick={reset}>Reset</button>
+        <button id='increment' onClick={()=>setCount(count + 1)}>Increment</button>
+        <button id='decrement' onClick={()=>setCount(count - 1)}>Decrement</button>
+        <button id='resetCount' onClick={()=>setCount(0)}>Reset</button>
       </div>
     </div>
   );
